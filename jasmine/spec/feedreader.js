@@ -29,7 +29,7 @@ $(function() {
          * and that the URL is not empty.
          */
 
-        it('URL defined and not empty', function() {
+        it('URLs are defined and not empty', function() {
           allFeeds.forEach(Feed => {
             expect(Feed.url).toBeDefined();
             expect(Feed.url.length).not.toBe(0);
@@ -41,7 +41,7 @@ $(function() {
          * and that the name is not empty.
          */
 
-         it('name defined and not empty', function() {
+         it('Names are defined and not empty', function() {
            allFeeds.forEach(Feed => {
              expect(Feed.name).toBeDefined();
              expect(Feed.name.length).not.toBe(0);
@@ -66,19 +66,18 @@ $(function() {
         */
 
         it('changes visibility when icon is clicked', function()  {
-          // Clicked once
-          $('.menu-icon-link').click();
-          expect($('body').hasClass('menu-hidden')).toBe(false);
+          const menuButton = document.querySelector(".menu-icon-link");
+          const clickEvent = new CustomEvent("click");
+          //Clicked once - shows menu
+          menuButton.dispatchEvent(clickEvent);
+          expect(document.body.classList.toggle("menu-hidden")).toBe(true);
 
-          // Clicked twice
-          $('menu-icon-link').click();
-          expect($('body').hasClass('menu-hidden')).toBe(true);
+          //Clicked twice - hides menu
+          menuButton.dispatchEvent(clickEvent);
+          expect(document.body.classList.toggle("menu-hidden")).toBe(true);
         });
 
     });
-
-
-
 
 
     /* TODO: Write a new test suite named "Initial Entries" */
