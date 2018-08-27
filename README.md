@@ -6,7 +6,7 @@ This project is a web-based application that reads RSS feeds from various websit
 
 ### Quick Start
 
-* You can view the [Live Preview](https://cdn.rawgit.com/charmaineratcliff/FeedReader/95dd0c29/index.html) here.
+* You can view the [Live Preview](http://htmlpreview.github.io/?https://github.com/charmaineratcliff/FeedReader/blob/master/index.html) here.
 
 ### Local Installation
 
