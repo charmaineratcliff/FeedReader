@@ -1,4 +1,4 @@
-# Feed Reader
+# Feed Reader - Jasmine Tests
 
 This project is a web-based application that reads RSS feeds from various websites. I used [Jasmine](http://jasmine.github.io/) to run a number of tests to ensure everything is running properly.
 
